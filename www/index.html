@@ -94,7 +94,7 @@
       })
     }
     function sortData() {
-      UTdata.order(key, true).fetchAll()
+      UTdata.order(key, false).fetchAll()
       .then(function(results){
         let msg="";
         for(let i=0; i<results.length; i++){
