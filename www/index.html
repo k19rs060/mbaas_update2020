@@ -32,6 +32,9 @@
           $("#display").addClass("bg-success");
           $("#display").html("正解！");
           $("#clear").html("クリア")
+          $(function(){
+            countData();
+            })
         }
       })
       .catch(function(results){
@@ -77,18 +80,23 @@
     function countData() {
       UTdata.count().fetchAll()
       .then(function(results){
-        $("#display").removeClass();
-        $("#display").addClass("bg-success");
-        $("#display").html("答えまで" + results.count + "回かかりました");
+        $("#displa1y").removeClass();
+        $("#display1").addClass("bg-success");
+        $("#display1").html("答えまで" + results.count + "回かかりました");
       })
       .catch(function(error){
-        $("#display").removeClass();
-        $("#display").addClass("bg-warning");
-        $("#display").html("count fail:" + JSON.stringify(error));
+        $("#display1").removeClass();
+        $("#display1").addClass("bg-warning");
+        $("#display1").html("count fail:" + JSON.stringify(error));
       })
     }
     function start() {
       $("#caa").html(ca);
+
+      //
+      $(function(){
+        deleteData();
+      })
     }
     </script>
 </head>
@@ -104,12 +112,14 @@
     <a onclick="enterData()" class="btn btn-outline-secondary" role="button">当てる</a>
   </div>
   <div>
-    <a onclick="fetchAll()" class="btn btn-outline-secondary" role="buton">Fetch All</a>
+    <a onclick="fetchAll()" class="btn btn-outline-secondary" role="buton">解答歴</a>
     <a onclick="deleteData()" class="btn btn-outline-secondary" role="buton">Delete</a>
     <a onclick="countData()" class="btn btn-outline-secondary" role="button">Count</a>
   </div>
   <div id="display" class="text-light bg-info">
     結果
+  </div>
+  <div id="display1" class="text-light bg-info">
   </div>
   <div id="caa" class="text">
     答え
