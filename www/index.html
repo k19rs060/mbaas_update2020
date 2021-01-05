@@ -31,7 +31,8 @@
           $("#display").removeClass();
           $("#display").addClass("bg-success");
           $("#display").html("正解！");
-          $("#clear").html("クリア")
+          $("#clear").html("クリア");
+          $("#clear").html("履歴を消してください。");
           $(function(){
             countData();
             })
@@ -92,11 +93,6 @@
     }
     function start() {
       $("#caa").html(ca);
-
-      //
-      $(function(){
-        deleteData();
-      })
     }
     </script>
 </head>
@@ -113,7 +109,7 @@
   </div>
   <div>
     <a onclick="fetchAll()" class="btn btn-outline-secondary" role="buton">解答歴</a>
-    <a onclick="deleteData()" class="btn btn-outline-secondary" role="buton">Delete</a>
+    <a onclick="deleteData()" class="btn btn-outline-secondary" role="buton">削除</a>
   </div>
   <div id="display" class="text-light bg-info">
     結果
