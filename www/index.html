@@ -79,7 +79,7 @@
       .then(function(results){
         $("#display").removeClass();
         $("#display").addClass("bg-success");
-        $("#display").html(results.count);
+        $("#display").html("答えまで" + results.count + "回かかりました");
       })
       .catch(function(error){
         $("#display").removeClass();
