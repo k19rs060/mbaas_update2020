@@ -45,7 +45,7 @@
       .then(function(results){
         let msg="";
         for(let i=0; i<results.length; i++){
-          msg += results[i].get(key) + "<br>";
+          msg += [i+1] + "回目 " + results[i].get(key) + "<br>";
         }
         $("#display").removeClass();
         $("#display").addClass("text-light");
