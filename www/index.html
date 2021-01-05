@@ -19,9 +19,19 @@
       uTdata.set(key, value)
       .save()
       .then(function(results){
-        $("#display").removeClass();
-        $("#display").addClass("bg-success");
-        $("#display").html("enter success");
+        if(value < ca){
+          $("#display").removeClass();
+          $("#display").addClass("bg-success");
+          $("#display").html("それよりは大きいよ！");
+        } else if(value > ca){
+          $("#display").removeClass();
+          $("#display").addClass("bg-success");
+          $("#display").html("それよりは小さいよ！");
+        } else if(value == ca){
+          $("#display").removeClass();
+          $("#display").addClass("bg-success");
+          $("#display").html("正解！");
+        }
       })
       .catch(function(results){
         $("#display").removeClass();
