@@ -31,6 +31,7 @@
           $("#display").removeClass();
           $("#display").addClass("bg-success");
           $("#display").html("正解！");
+          $("#clear").html("クリア")
         }
       })
       .catch(function(results){
@@ -113,5 +114,6 @@
   <div id="caa" class="text">
     答え
   </div>
+  <div id="clear" class="text-center text-light bg-danger"></div>
 </body>
 </html>
