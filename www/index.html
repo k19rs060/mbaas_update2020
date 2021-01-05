@@ -75,6 +75,10 @@
         $("#display").html("count fail:" + JSON.stringify(error));
       })
     }
+    function start() {
+      let ca = Math.floor(Math.random()*101);
+      $("#caa").html(ca);
+    }
     </script>
 </head>
 <body>
@@ -95,6 +99,9 @@
   </div>
   <div id="display" class="text-light bg-info">
     Results
+  </div>
+  <div id="caa" class="text">
+    ca
   </div>
 </body>
 </html>
